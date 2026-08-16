@@ -242,8 +242,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-black sm:py-6">
-      <div className="relative w-full min-w-0 max-w-[420px] h-screen sm:h-[860px] sm:max-h-[92vh] overflow-hidden bg-bg sm:rounded-[32px] sm:border sm:border-border sm:shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)]">
+    <div className="app-viewport">
+      <div className="app-shell">
         {screen()}
         {levelUp && <LevelUpModal onClose={() => setLevelUp(false)} />}
         <Toaster />
