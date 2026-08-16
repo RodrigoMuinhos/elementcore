@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #0b0a0c;
+  --color-onyx: #19171b;
+  --color-surface: #121014;
+  --color-elevated: #1b1920;
+  --color-border: #2a2830;
+  --color-border-strong: #47434e;
+  --color-gold: #d29f22;
+  --color-gold-hi: #e9bc45;
+  --color-gold-dark: #6f5010;
+  --color-crimson: #5d0018;
+  --color-crimson-hi: #93122f;
+  --color-ink: #f1efe9;
+  --color-sub: #a6a39c;
+  --color-muted: #6d6c68;
+  --color-success: #81a66b;
+  --color-warning: #d5a642;
+  --color-danger: #a4473d;
+
+  /* Elemental system — FIRE·Power / AIR·Flex / WATER·Balance / EARTH·Core */
+  --color-fire: #d94436;
+  --color-fire-hi: #ef6a52;
+  --color-air: #9a86d6;
+  --color-air-hi: #b6a4ee;
+  --color-water: #4aa6c9;
+  --color-water-hi: #66c6e6;
+  --color-earth: #9fb15a;
+  --color-earth-hi: #bccd76;
+
+  --font-display: 'Rajdhani', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(120% 70% at 50% -10%, #1c130a 0%, transparent 52%),
+    radial-gradient(90% 60% at 100% 0%, rgba(93, 0, 24, 0.4) 0%, transparent 45%),
+    #0b0a0c;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.tracked {
+  letter-spacing: 0.14em;
+}
+.tracked-sm {
+  letter-spacing: 0.08em;
+}
+
+.hex-field {
+  background-image:
+    linear-gradient(30deg, rgba(197, 138, 34, 0.05) 1px, transparent 1px),
+    linear-gradient(-30deg, rgba(197, 138, 34, 0.05) 1px, transparent 1px);
+  background-size: 22px 38px;
+}
+
+.scroll-area {
+  scrollbar-width: none;
+}
+.scroll-area::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@keyframes ec-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: ec-fade-up 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes ec-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  animation: ec-fade 0.35s ease both;
+}
+
+@keyframes ec-loadbar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes ec-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface),
+    var(--color-elevated),
+    var(--color-surface)
+  );
+  animation: ec-pulse 1.4s ease-in-out infinite;
+}
+
+button {
+  font-family: inherit;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
