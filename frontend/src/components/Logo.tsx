@@ -11,18 +11,22 @@ export function LogoMark({ size = 44 }: { size?: number }) {
         stroke="#2a2a28"
         strokeWidth="1.2"
       />
-      <path
-        d="M18 18h12l-4 6h6l-12 12 4-9h-6z"
-        fill="url(#lg)"
-      />
+      <path d="M18 18h12l-4 6h6l-12 12 4-9h-6z" fill="url(#lg)" />
       <defs>
-        <linearGradient id="lg" x1="7" y1="3" x2="41" y2="45" gradientUnits="userSpaceOnUse">
+        <linearGradient
+          id="lg"
+          x1="7"
+          y1="3"
+          x2="41"
+          y2="45"
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#e2a93b" />
           <stop offset="1" stopColor="#765015" />
         </linearGradient>
       </defs>
     </svg>
-  )
+  );
 }
 
 export function Wordmark({ size = 26 }: { size?: number }) {
@@ -31,8 +35,7 @@ export function Wordmark({ size = 26 }: { size?: number }) {
       className="font-display uppercase tracked font-600 leading-none"
       style={{ fontSize: size }}
     >
-      <span className="text-ink">ELEMENT</span>{' '}
-      <span className="text-gold">CORE</span>
+      <span className="text-ink">ELEMENT CORE</span>
     </span>
-  )
+  );
 }

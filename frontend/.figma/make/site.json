@@ -1,0 +1,11 @@
+{
+  "title": "ELEMENT CORE",
+  "description": "ELEMENT CORE — treinamento, performance e evolução em um só lugar.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
